@@ -1,0 +1,26 @@
+/* Background: #f5f5f4 (off-white)
+Text: #2f3e46 (deep green-gray)
+Accent: #84a98c (sage green)
+Buttons/Links: #52796f
+Light UI Elements: #cad2c5 */
+:root {
+    --fontColor: #b7b4a9;
+}
+
+/* Page Formatting        */
+body {
+    background-color: #78273f;
+}
+
+/* Text Sections */
+.text {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--fontColor);
+}
+
+/* About paragraph*/
+#about_paragraph {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--fontColor);
+}
+
