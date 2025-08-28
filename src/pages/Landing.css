@@ -1,0 +1,48 @@
+.head-shot { 
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.landing-header {
+    margin-top: 75px;
+    margin-bottom: 50px;
+}
+.landing-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.landing-subtitle {
+    color: #84a98c;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+.intro-text {
+    color: white;
+    font-size: 42px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    width: 50%;
+    text-decoration: underline;
+    text-decoration-color: #84a98c;
+    animation: slideInLeft 1s ease-out 0.3s both;
+}

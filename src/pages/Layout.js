@@ -10,7 +10,7 @@ const Layout = () => {
         <Outlet />
       </main>
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Matthew Lindsey. All rights reserved.</p>
       </footer>
     </div>
   );

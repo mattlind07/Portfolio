@@ -1,0 +1,39 @@
+.resume-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;;
+    width: 100%;
+}
+
+.resume-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.resume-image {
+    width: 80vw;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid #7fd7ff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.resume-title{ 
+    color: #84a98c;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #84a98c;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}

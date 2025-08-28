@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+.contact-title {
+    text-decoration: underline;
+    text-decoration-color: rgb(67, 196, 225);
+}
+.contact-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.contact, .contact-g, .contact-l {
+    flex: 1 1 220px;
+    min-width: 220px;
+    max-width: 300px;
+    margin: 0 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    padding: 32px 20px;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact:hover, .contact-g:hover, .contact-l:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.13);
+}
+
+.contact a, .contact-g a, .contact-l a {
+    color: #7fd7ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.contact a:hover, .contact-g a:hover, .contact-l a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+    .contact a:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.13);
+}
+.contact a, .contact-g a, .contact-l a {
+    color: #7fd7ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.contact a:hover, .contact-g a:hover, .contact-l a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-title {
+    color: #84a98c;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #84a98c;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+@media (max-width: 900px) {
+    .contact-div {
+        flex-direction: column;
+        align-items: center;
+    }
+        .contact {
+        max-width: 90vw;
+        margin-bottom: 24px;
+    }
+}

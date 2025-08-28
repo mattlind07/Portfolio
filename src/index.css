@@ -47,6 +47,8 @@ Light UI Elements: #cad2c5 */
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   z-index: 1000;
+  border-radius: 0 0 15px 15px;
+  
 }
 .navbar img {
   margin-right: 15px;
@@ -100,62 +102,21 @@ Light UI Elements: #cad2c5 */
 }
 
 
-/* Headshot image */
-.Headshot {
-  border-radius: 12px;
-  width: 500px;
-  margin-top: 80px;
-   /* Center the image and add some vertical spacing */
-  display: block;     /* Ensure proper centering */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-/* Text Sections */
-.text {
-  font-family: 'Times New Roman';
-  color: var(--fontColor);
-  width: 25%;
-
-}
-/* Centered each header */
-h1 {
-  text-align: center;
-}
-
-/* About paragraph*/
+/* About container */
 .about_container {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: column;
+  margin-top: 50px;
 }
 
-.about_paragraph {
-  font-family: 'Times New Roman', Times, serif;
-  color: var(--fontColor);
-}
-/* Projects paragraph*/
-.projects_paragraph {
-  font-family: 'Times New Roman', Times, serif;
-  color: var(--fontColor);
+/* Landing title */
+.landing-title {
+  color: white !important;
+  text-align: center;
 }
 
-/* WeatherWeGo link hover */
-a:hover {
-  color: #38BDF8;
+/* Force landing title to be white */
+h1.landing-title {
+  color: white !important;
 }
-
-
-/* Skills paragraph*/
-.skills_paragraph {
-  font-family: 'Times New Roman', Times, serif;
-  color: var(--fontColor);
-}
-/* Contact body*/
-.contact_paragraph {
-  font-family: 'Times New Roman', Times, serif;
-  color: var(--fontColor);
-}
-
-

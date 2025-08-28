@@ -15,7 +15,7 @@ function Navbar() {
           <ul>
             <Link to="/about" className="navbutton">About Me</Link>
             <Link to="/projects" className="navbutton">Projects</Link>
-            <Link to="/skills" className="navbutton">Skills</Link>
+            <Link to="/resume" className="navbutton">Resume</Link>
             <Link to="/contact" className="navbutton">Contact</Link>
           </ul>
         </nav>
