@@ -2,8 +2,8 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "engines": { 
-    "node": "20.x" 
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
@@ -12,9 +12,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "react-router-dom": "7.5.3"
+    "react-router-dom": "7.5.3",
+    "react-scripts": "^0.0.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,5 +40,22 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  },
+  "description": "Welcome to my portfolio repository! Here, you'll find a showcase of my projects, skills, and accomplishments as a developer.",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattlind07/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattlind07/Portfolio/issues"
+  },
+  "homepage": "https://github.com/mattlind07/Portfolio#readme"
 }
