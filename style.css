@@ -28,7 +28,6 @@ body {
     width: 100%;
     max-width: 1300px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  
 }
 
 /* Slide Headshot to left */
@@ -49,16 +48,15 @@ body {
     text-align: center;
     padding: 10px;
     margin-right: 15px;
-   
-  }
+}
+
 /* Nav button grows */
-  .navbutton:hover {
+.navbutton:hover {
     transform: scale(1.2);
-  }
-  
+}
 
 /* Headshot image */
-  #Headshot {
+#Headshot {
     border-radius: 8px;
     width: 250px;
     animation-name: slide;
@@ -67,16 +65,15 @@ body {
     animation-fill-mode: forwards;
     margin-left: 100px;
     margin-top: 15px;
-  }
-  
+}
 
 /* Text Sections */
 .text {
     font-family: 'Times New Roman';
     color: var(--fontColor);
     width: 25%;
- 
 }
+
 /* Centered each header */
 h1 {
     text-align: center;
@@ -87,13 +84,13 @@ h1 {
     align-items: center;
     display: flex;
     flex-direction: row;
-    
 }
 
 #about_paragraph {
     font-family: 'Times New Roman', Times, serif;
     color: var(--fontColor);
 }
+
 /* Projects paragraph*/
 #projects_paragraph {
     font-family: 'Times New Roman', Times, serif;
@@ -105,15 +102,98 @@ a:hover {
     color: #38BDF8;
 }
 
-
 /* Skills paragraph*/
 #skills_paragraph {
     font-family: 'Times New Roman', Times, serif;
     color: var(--fontColor);
 }
+
 /* Contact body*/
 #contact_paragraph {
     font-family: 'Times New Roman', Times, serif;
     color: var(--fontColor);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar mobile adjustments */
+    #navbar {
+        padding: 10px 15px;
+        height: 70px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #logo {
+        width: 40px;
+        height: auto;
+    }
+    
+    /* Nav buttons mobile */
+    .navbutton {
+        padding: 8px 12px;
+        margin-right: 8px;
+        font-size: 0.9rem;
+    }
+    
+    /* About container mobile */
+    .about_container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    #Headshot {
+        width: 200px;
+        margin: 0 auto 20px auto;
+        animation: none;
+        transform: none;
+    }
+    
+    /* Text sections mobile */
+    .text {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small mobile devices */
+    #navbar {
+        padding: 8px 10px;
+        height: 60px;
+    }
+    
+    #logo {
+        width: 35px;
+    }
+    
+    .navbutton {
+        padding: 6px 10px;
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .about_container {
+        padding: 15px;
+    }
+    
+    #Headshot {
+        width: 150px;
+    }
+    
+    .text {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
 }
 
