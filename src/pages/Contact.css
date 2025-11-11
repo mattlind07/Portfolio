@@ -100,13 +100,71 @@ body {
     font-family: 'Segoe UI', 'Roboto', sans-serif;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 968px) {
+    .contact-row {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
     .contact-div {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
     }
-        .contact {
-        max-width: 90vw;
-        margin-bottom: 24px;
+    
+    .contact, .contact-g, .contact-l {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .contact-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact, .contact-g, .contact-l {
+        padding: 24px 15px;
+    }
+    
+    .text {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact, .contact-g, .contact-l {
+        padding: 20px 12px;
+    }
+    
+    .contact h2, .contact-g h2, .contact-l h2 {
+        font-size: 1.1rem;
+    }
+    
+    .contact p, .contact-g a, .contact-l a {
+        font-size: 0.9rem;
+    }
+    
+    .contact-div {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .contact-row {
+        gap: 15px;
     }
 }

@@ -5,6 +5,8 @@
     margin-left: 100px;
     margin-right: 100px;
     animation: slideInLeft 1s ease-out;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 @keyframes slideInLeft {
@@ -20,6 +22,7 @@
 .landing-header {
     margin-top: 75px;
     margin-bottom: 50px;
+    padding: 0 20px;
 }
 .landing-container {
     display: flex;
@@ -28,6 +31,7 @@
     justify-content: center;
     padding: 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .landing-subtitle {
@@ -45,4 +49,79 @@
     text-decoration: underline;
     text-decoration-color: #84a98c;
     animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 968px) {
+    .landing-container {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+    
+    .head-shot {
+        width: 300px;
+        height: 300px;
+        margin: 20px 0;
+    }
+    
+    .intro-text {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        padding: 0 15px;
+        margin-top: 20px;
+    }
+    
+    .landing-header {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head-shot {
+        width: 250px;
+        height: 250px;
+        margin: 15px 0;
+    }
+    
+    .intro-text {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+    
+    .landing-subtitle {
+        font-size: 1rem;
+    }
+    
+    .landing-header {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .head-shot {
+        width: 200px;
+        height: 200px;
+        margin: 10px 0;
+    }
+    
+    .intro-text {
+        font-size: 18px;
+        padding: 0 5px;
+    }
+    
+    .landing-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .landing-container {
+        padding: 15px 10px;
+    }
+    
+    .landing-header {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
 }

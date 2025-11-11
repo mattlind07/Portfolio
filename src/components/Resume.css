@@ -37,3 +37,63 @@
     margin-bottom: 30px;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
 }
+
+/* Mobile Responsive Design */
+@media (max-width: 968px) {
+    .resume-container {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+    
+    .resume-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .resume-image {
+        width: 90vw;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-container {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    
+    .resume-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .resume-image {
+        width: 95vw;
+        max-width: 500px;
+    }
+    
+    .resume-images {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-container {
+        margin-top: 20px;
+        padding: 0 5px;
+    }
+    
+    .resume-title {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .resume-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .resume-images {
+        gap: 12px;
+    }
+}
