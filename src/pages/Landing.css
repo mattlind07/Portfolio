@@ -46,6 +46,7 @@
 .intro-text {
     color: white;
     font-size: 42px;
+    font-weight: bold;
     font-family: 'Inter', sans-serif;
     width: 50%;
     text-decoration: underline;
