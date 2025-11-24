@@ -28,6 +28,7 @@
     margin-bottom: 20px;
     font-size: 50px;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .video-container {
@@ -105,6 +106,7 @@
     
     .video-section h2 {
         font-size: 2.5rem;
+        font-weight: bold;
     }
     
     .description-section {
@@ -123,6 +125,7 @@
     .video-section h2 {
         font-size: 2rem;
         margin-bottom: 15px;
+        font-weight: bold;
     }
     
     .description-section h3 {
@@ -145,6 +148,7 @@
     .video-section h2 {
         font-size: 1.5rem;
         margin-bottom: 10px;
+        font-weight: bold;
     }
     
     .description-section {
