@@ -7,6 +7,8 @@ function Projects () {
     
           
           <div className="projects-container">
+
+            {/* Weather We Go Project */}
             <div className="video-section">
               <h2>WeatherWeGo</h2>
               <div className="video-container">
@@ -31,6 +33,7 @@ function Projects () {
                 <li>Login Page</li>
               </ul>
             </div>
+            {/* Cashify Project */}
           </div>
         
 
