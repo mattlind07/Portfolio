@@ -75,6 +75,9 @@
     text-decoration: underline;
     text-decoration-color: #84a98c;
     animation: slideInLeft 1s ease-out 0.3s both;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
 /* Mobile Responsive Design */
@@ -92,10 +95,15 @@
     
     .intro-text {
         width: 100%;
-        font-size: 28px;
+        min-width: 0;
+        max-width: 100%;
+        font-size: 24px;
         text-align: center;
         padding: 0 15px;
         margin-top: 20px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .landing-header {
@@ -122,8 +130,13 @@
     }
     
     .intro-text {
-        font-size: 24px;
+        font-size: 20px;
         padding: 0 10px;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .landing-subtitle {
@@ -154,8 +167,13 @@
     }
     
     .intro-text {
-        font-size: 18px;
-        padding: 0 5px;
+        font-size: 16px;
+        padding: 0 10px;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .landing-subtitle {
@@ -189,5 +207,10 @@
     
     .landing-title {
         font-size: 14px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+        padding: 0 8px;
     }
 }
