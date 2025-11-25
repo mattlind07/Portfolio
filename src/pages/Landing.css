@@ -27,6 +27,14 @@
     padding: 0 20px;
     font-size: 30px;
 }
+
+.landing-title {
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 .landing-container {
     display: flex;
     flex-direction: row;
@@ -81,6 +89,11 @@
     .landing-header {
         margin-top: 100px;
         margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    
+    .landing-title {
+        font-size: 24px;
     }
 }
 
@@ -103,6 +116,11 @@
     .landing-header {
         margin-top: 120px;
         margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    .landing-title {
+        font-size: 20px;
     }
 }
 
@@ -129,5 +147,10 @@
     .landing-header {
         margin-top: 150px;
         margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .landing-title {
+        font-size: 18px;
     }
 }
