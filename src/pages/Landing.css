@@ -49,7 +49,9 @@
     font-size: 42px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
-    width: 50%;
+    flex: 1 1 75%;
+    min-width: 600px;
+    max-width: none;
     text-decoration: underline;
     text-decoration-color: #84a98c;
     animation: slideInLeft 1s ease-out 0.3s both;
