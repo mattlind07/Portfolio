@@ -53,6 +53,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 .video-section img {
+    margin-top: 10px;
     width: auto;
     max-width: 360px;
     height: auto;
@@ -62,10 +63,20 @@
     margin-bottom: 15px;
 }
 
+.iron-kernel-img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 968px) {
     .video-section img {
         width: 100%;
         max-width: 320px;
+    }
+
+    .iron-kernel-img {
+        max-width: 260px;
     }
 }
 

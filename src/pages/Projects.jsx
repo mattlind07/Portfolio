@@ -14,11 +14,11 @@ function Projects () {
               <h2>Iron Kernel</h2>
               <p className='text-white text-center'>
                 <strong>
-                  Built a small operating system in C and x86 Assembly with process scheduling, 
+                  Built an operating system in C and x86 Assembly with process scheduling, 
                   system calls, serial I/O, and custom memory management.
                 </strong>
               </p>
-              <img src={IronKernelMenu} alt="Iron Kernel Menu"/>
+              <img className="iron-kernel-img" src={IronKernelMenu} alt="Iron Kernel Menu"/>
               <div className="key-features">
                     <p>
                         <strong>Key Features:</strong>
