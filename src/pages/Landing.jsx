@@ -11,7 +11,7 @@ function Landing() {
         <div className="landing-container">
             <img className="head-shot" src={Headshot} alt="head-shot"/>
             <h2 className="intro-text"> 
-                Junior at West Virginia University studying Computer 
+                Senior at West Virginia University studying Computer 
                 Science with an emphasis in Cybersecurity. Pursuing a career in Software and IT Technology.
             </h2> 
         </div> 
