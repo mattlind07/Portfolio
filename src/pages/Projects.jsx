@@ -3,17 +3,57 @@ import WeatherWeGo from '../assets/WeatherWeGo.mov';
 import AssemblyToMachine from '../assets/assemblytomachine.png';
 import MachineToAssembly from '../assets/machinetoassembly.png';
 import HexToAssembly from '../assets/hextoassembly.png';
+import IronKernelMenu from '../assets/IronKernelMenu.png';
 
 function Projects () {
     return (
-      
-    
-          
         <div>
+          <div className="projects-container">
+            { /* Iron Kernel MPX OS Project */}
+            <div className="video-section">
+              <h2>Iron Kernel</h2>
+              <p className='text-white text-center'>
+                <strong>
+                  Built a small operating system in C and x86 Assembly with process scheduling, 
+                  system calls, serial I/O, and custom memory management.
+                </strong>
+              </p>
+              <img src={IronKernelMenu} alt="Iron Kernel Menu"/>
+              <div className="key-features">
+                    <p>
+                        <strong>Key Features:</strong>
+                    </p>
+                      <ul>
+                        <li>- Built a multiprogramming OS kernel in C and x86 Assembly</li>
+                        <li>- Implemented PCB-based process management and priority scheduling</li>
+                        <li>- Created ready and blocked queues for process state management</li>
+                        <li>- Designed interrupt-based system calls for kernel service requests</li>
+                        <li>- Implemented manual process loading and cooperative context switching</li>
+                        <li>- Built an interactive COM1 serial command shell</li>
+                        <li>- Added commands to create, delete, block, suspend, resume, and inspect processes</li>
+                        <li>- Supported RTC date/time commands, alarms, memory inspection, and shutdown</li>
+                        <li>- Created a custom heap manager with allocation, freeing, splitting, and merging</li>
+                      </ul>
+                </div>
+            </div>
+            <div className="description-section">
+              <h3>Project Description</h3>
+              <p>
+                Built a multiprogramming operating system kernel in C and x86 Assembly. The system supports process creation/management, 
+                priority scheduling, cooperative multitasking, interrupt-based system calls, serial I/O, RTC date/time 
+                commands, alarms, and memory inspection.
 
-          {/* Weather We Go Project */}
+                Implemented core OS components including Process Control Blocks, ready/blocked queues, context switching, serial command shell,
+                and custom heap allocation with block splitting, freeing, and merging.
+              </p>
+              <p className="link-text">
+                Source code private due to university academic policy.
+              </p>
+            </div>
+          </div>
 
-          <div className="projects-container">  
+          <div className="projects-container">
+            {/* Weather We Go Project */}
             <div className="video-section">
               <h2>WeatherWeGo</h2>
               <div className="video-container">
@@ -39,8 +79,9 @@ function Projects () {
               </ul>
               <a className="link-text" href="https://weatherwego2.netlify.app" target="_blank">Visit WeatherWeGo Here →</a>
             </div>
-            </div>  
-            {/* MIPS Translatron Project */}
+          </div>
+
+          {/* MIPS Translatron Project */}
             <div className="projects-container">
               <div className="video-section">
                 <h2>MIPS Translatron Revamp</h2>
@@ -53,7 +94,7 @@ function Projects () {
                 <img src={AssemblyToMachine} alt="Assembly to Machine Code" />
                 <img src={MachineToAssembly} alt="Machine to Assembly Code" />
                 <img src={HexToAssembly} alt="Hex to Assembly" />
-                <div className="mips-key-features">
+                <div className="key-features">
                   <p>
                       <strong>Key Features:</strong>
                   </p>
