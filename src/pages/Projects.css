@@ -8,11 +8,15 @@
     display: flex;
     gap: 35px;
     max-width: 1200px;
-    margin: 0 auto 40px;
+    margin: 20px auto 40px;
     padding: 20px;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+}
+
+.projects-container:first-of-type {
+    margin-top: 40px;
 }
 
 
@@ -25,6 +29,7 @@
 }
 
 .video-section h2 {
+    scroll-margin-top: 120px;
     color: #84a98c;
     margin-bottom: 20px;
     font-size: 50px;
@@ -49,7 +54,7 @@
 }
 .video-section img {
     width: 100%;
-    max-width: 600px;
+    max-width: 480px;
     height: auto;
     border-radius: 12px;
     border: 2px solid rgba(132, 169, 140, 0.4);
