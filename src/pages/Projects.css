@@ -15,6 +15,12 @@
     min-height: 80vh;
 }
 
+.project-screenshot {
+  max-width: 900px;
+  width: 100%;        
+  height: auto;       
+}
+
 .projects-container:first-of-type {
     margin-top: 40px;
 }
