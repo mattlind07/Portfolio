@@ -47,6 +47,9 @@ function Projects () {
                 Source code private: internship work at WVU Medicine.
               </p>
             </div>
+          </div>
+
+          <div className="projects-container">
             { /* Iron Kernel MPX OS Project */}
             <div className="video-section">
               <h2>Iron Kernel</h2>
