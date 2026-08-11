@@ -9,6 +9,43 @@ function Projects () {
     return (
         <div>
           <div className="projects-container">
+            {/* Status Hawk*/}
+            <div className="video-section">
+              <h2>Status Hawk</h2>
+              <p className='text-white text-center'>
+                <strong>
+                  Built a full-stack health-monitoring platform in .NET and Blazor that automates endpoint checks to track application 
+                  uptime across a software development department.
+                </strong>
+              </p>
+              <img className='iron-kernel-img' src={ListExpanded} alt="Status Hawk Dashboard" />
+              <div className='key-features'>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                  <li>Full-stack .NET / Blazor platform monitoring live application uptime across a dev department</li>
+                  <li>Designed around a Control Plane / Execution Plane architecture separating check scheduling from execution</li>
+                  <li>Built a REST API with both CRUD and worker-facing endpoints (PendingChecks, ReportResult)</li>
+                  <li>Implemented two check types: site checks (status-code only) and health-point checks (parses a JSON health body that can report unhealthy dependencies behind a 200)</li>
+                  <li>Auto-creates incidents when an endpoint crosses a failure threshold, and auto-resolves them on recovery</li>
+                  <li>Real-time System Status dashboard with a hierarchical view (Application → server instance → individual check) via MudTreeView</li>
+                  <li>Scheduled maintenance windows that suppress checks on covered endpoints to prevent false incidents during planned work</li>
+                  <li>Role-based access: admin (dev team) for full edit, read-only viewer (IT) for scoped visibility</li>
+                </ul>
+              </div>
+            </div>
+            <div className="description-section">
+              <h3>Project Description</h3>
+              <p>
+                StatusHawk is a health-monitoring platform that automatically verifies application uptime across WVU Medicine. A worker service 
+                (Execution Plane) performs scheduled HTTP checks against configured endpoints, while the server  (Control Plane) parses results, 
+                tracks incident state, and serves a Blazor/MudBlazor UI. The system supports application and  endpoint management, automated and 
+                manual incident tracking, recurring scheduled maintenance, and a live status dashboard drilling from application down to individual 
+                check results. Built with .NET, Blazor, MudBlazor, Entity Framework Core, and SQL Server on Azure DevOps.
+              </p>
+              <p className="link-text">
+                Source code private: internship work at WVU Medicine.
+              </p>
+            </div>
             { /* Iron Kernel MPX OS Project */}
             <div className="video-section">
               <h2>Iron Kernel</h2>
