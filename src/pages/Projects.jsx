@@ -19,7 +19,7 @@ function Projects () {
                   uptime across a software development department.
                 </strong>
               </p>
-              <img className='iron-kernel-img' src={ListExpanded} alt="Status Hawk Dashboard" />
+              <img className='project-screenshot' src={ListExpanded} alt="Status Hawk Dashboard" />
               <div className='key-features'>
                 <p><strong>Key Features:</strong></p>
                 <ul>
