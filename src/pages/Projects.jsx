@@ -4,6 +4,7 @@ import AssemblyToMachine from '../assets/assemblytomachine.png';
 import MachineToAssembly from '../assets/machinetoassembly.png';
 import HexToAssembly from '../assets/hextoassembly.png';
 import IronKernelMenu from '../assets/IronKernelMenu.png';
+import ListExpanded from '../assets/ListExpanded.png';
 
 function Projects () {
     return (
