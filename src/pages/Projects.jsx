@@ -23,14 +23,14 @@ function Projects () {
               <div className='key-features'>
                 <p><strong>Key Features:</strong></p>
                 <ul>
-                  <li>Full-stack .NET / Blazor platform monitoring live application uptime across a dev department</li>
-                  <li>Designed around a Control Plane / Execution Plane architecture separating check scheduling from execution</li>
-                  <li>Built a REST API with both CRUD and worker-facing endpoints (PendingChecks, ReportResult)</li>
-                  <li>Implemented two check types: site checks (status-code only) and health-point checks (parses a JSON health body that can report unhealthy dependencies behind a 200)</li>
-                  <li>Auto-creates incidents when an endpoint crosses a failure threshold, and auto-resolves them on recovery</li>
-                  <li>Real-time System Status dashboard with a hierarchical view (Application → server instance → individual check) via MudTreeView</li>
-                  <li>Scheduled maintenance windows that suppress checks on covered endpoints to prevent false incidents during planned work</li>
-                  <li>Role-based access: admin (dev team) for full edit, read-only viewer (IT) for scoped visibility</li>
+                  <li>- Full-stack .NET / Blazor platform monitoring live application uptime across a dev department</li>
+                  <li>- Designed around a Control Plane / Execution Plane architecture separating check scheduling from execution</li>
+                  <li>- Built a REST API with both CRUD and worker-facing endpoints (PendingChecks, ReportResult)</li>
+                  <li>- Implemented two check types: site checks (status-code only) and health-point checks (parses a JSON health body that can report unhealthy dependencies behind a 200)</li>
+                  <li>- Auto-creates incidents when an endpoint crosses a failure threshold, and auto-resolves them on recovery</li>
+                  <li>- Real-time System Status dashboard with a hierarchical view (Application → server instance → individual check) via MudTreeView</li>
+                  <li>- Scheduled maintenance windows that suppress checks on covered endpoints to prevent false incidents during planned work</li>
+                  <li>- Role-based access: admin (dev team) for full edit, read-only viewer (IT) for scoped visibility</li>
                 </ul>
               </div>
             </div>

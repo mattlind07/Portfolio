@@ -15,10 +15,10 @@
     min-height: 80vh;
 }
 
-.project-screenshot {
+.video-section .project-screenshot {
   max-width: 900px;
-  width: 100%;        
-  height: auto;       
+  width: 100%;
+  height: auto;
 }
 
 .projects-container:first-of-type {
