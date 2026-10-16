@@ -6,7 +6,7 @@ function Landing() {
     <div>
         <div className='landing-header'>
             <h1 className="landing-title"> Welcome to my Portfolio. Thanks for visiting!</h1>
-            <p className="landing-subtitle">Software Developer & Creative Problem Solver</p>
+            <p className="landing-subtitle">Software Developer & IT Technician</p>
         </div>
         <div className="landing-container">
             <img className="head-shot" src={Headshot} alt="head-shot"/>
