@@ -1,5 +1,5 @@
 import './Projects.css';
-import WeatherWeGo from '../assets/WeatherWeGo.mov';
+import MacroCoach from '../assets/MacroCoach.png';
 import AssemblyToMachine from '../assets/assemblytomachine.png';
 import MachineToAssembly from '../assets/machinetoassembly.png';
 import HexToAssembly from '../assets/hextoassembly.png';
@@ -94,31 +94,29 @@ function Projects () {
           </div>
 
           <div className="projects-container">
-            {/* Weather We Go Project */}
+            {/* Macro Coach */}
             <div className="video-section">
-              <h2>WeatherWeGo</h2>
+              <h2>Macro Coach</h2>
               <div className="video-container">
-                <video src={WeatherWeGo} alt="WeatherWeGo" controls />
+                <img src={MacroCoach} alt="MacroCoach" controls />
+              </div>
+              <div className="key-features">
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                  <li>- Personalized calorie and macro calculator</li>
+                  <li>- Adaptive weekly target recalibration</li>
+                  <li>- Weigh-in tracker with progress history</li>
+                  <li>- AI-powered coaching with Google Gemini</li>
+                  <li>- Login Page</li>
+                </ul>
               </div>
             </div>
             <div className="description-section">
               <h3>Project Description</h3>
               <p>
-                This project was based around designing a web app that displays weather information 
-                in an intuitive and user-friendly interface. The application provides real-time 
-                weather data with interactive features and a clean, modern design.
+                Macro Coach is a full-stack nutrition web app that calculates personalized calorie and macro targets and adapts them over time. Users log their weight each week, and the app recalibrates their targets based on real progress instead of a fixed formula. It’s built with React, Supabase Postgres, and serverless functions, with Google Gemini powering AI coaching features.
               </p>
-              <p>
-                <strong>Key Features:</strong>
-              </p>
-              <ul>
-                <li>Real-time weather data integration</li>
-                <li>Interactive map interface</li>
-                <li>Find a Walkability Score</li>
-                <li>Personality Quiz</li>
-                <li>Login Page</li>
-              </ul>
-              <a className="link-text" href="https://weatherwego2.netlify.app" target="_blank">Visit WeatherWeGo Here →</a>
+              <a className="link-text" href="https://macro-coach-ten.vercel.app" target="_blank">Visit Macro Coach Here →</a>
             </div>
           </div>
 

@@ -51,6 +51,14 @@
     justify-content: center;
 }
 
+.video-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 .video-container video {
     width: 100%;
     height: auto;
@@ -69,8 +77,8 @@
     margin-bottom: 15px;
 }
 
-.iron-kernel-img {
-    max-width: 280px;
+.video-section .iron-kernel-img {
+    max-width: 200px;
     width: 100%;
     height: auto;
 }
@@ -81,8 +89,8 @@
         max-width: 320px;
     }
 
-    .iron-kernel-img {
-        max-width: 260px;
+    .video-section .iron-kernel-img {
+        max-width: 180px;
     }
 }
 
