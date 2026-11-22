@@ -5,7 +5,7 @@ import Projects from './pages/Projects.jsx';
 import Resume from './components/Resume.jsx';
 import Contact from './pages/Contact.jsx';
 import Landing from './pages/Landing.jsx';
-import './App.css';
+import NoPage from './pages/NoPage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

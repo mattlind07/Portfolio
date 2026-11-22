@@ -1,42 +1,48 @@
 import logo from '../assets/MLlogo.png';
-import {Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
+const NAV_ITEMS = [
+    { to: '/about', label: 'About' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/resume', label: 'Resume' },
+    { to: '/contact', label: 'Contact' },
+];
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-    };
+    const closeMenu = () => setIsMenuOpen(false);
 
     return (
-        
-        <nav className="navbar">
-        <div className='branding'>
-        <Link to="/" onClick={closeMenu}>   
-          <img className="logo" src={logo} alt="Logo" />
-        </Link>
-          <h1 className="Name">Matthew Lindsey</h1>
-        </div>
-        <button className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-          <ul className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
-            <li><Link to="/about" className="navbutton" onClick={closeMenu}>About Me</Link></li>
-            <li><Link to="/projects" className="navbutton" onClick={closeMenu}>Projects</Link></li>
-            <li><Link to="/resume" className="navbutton" onClick={closeMenu}>Resume</Link></li>
-            <li><Link to="/contact" className="navbutton" onClick={closeMenu}>Contact</Link></li>
-          </ul>
+        <nav className="navbar" aria-label="Main navigation">
+            <Link to="/" className="branding" onClick={closeMenu}>
+                <img className="logo" src={logo} alt="" />
+                <span className="Name">Matthew Lindsey</span>
+            </Link>
+
+            <button
+                className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+                onClick={() => setIsMenuOpen((open) => !open)}
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
+                aria-controls="nav-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-menu" className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+                {NAV_ITEMS.map(({ to, label }) => (
+                    <li key={to}>
+                        {/* NavLink adds the "active" class for the current page */}
+                        <NavLink to={to} className="navbutton" onClick={closeMenu}>
+                            {label}
+                        </NavLink>
+                    </li>
+                ))}
+            </ul>
         </nav>
-
-
     );
 }
 

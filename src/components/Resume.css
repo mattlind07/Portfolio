@@ -1,99 +1,100 @@
-.resume-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.resume-card {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 28px;
     text-align: center;
-    margin-top: 50px;;
-    width: 100%;
 }
 
-.resume-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.resume-image {
-    width: 80vw;
-    max-width: 700px;
-    height: auto;
+/* Clickable preview of page 1 */
+.resume-preview {
+    position: relative;
     display: block;
-    border-radius: 8px;
-    border: 2px solid #7fd7ff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    background-color: white;
+    max-height: 520px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: #fff;
 }
 
-.resume-title{ 
-    color: #84a98c;
-    text-align: center;
-    font-size: 3.5rem;
+.resume-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.resume-preview-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 24px;
+    /* fade the cut-off bottom of the page into the card */
+    background: linear-gradient(to bottom, rgba(19, 28, 46, 0) 55%, rgba(19, 28, 46, 0.92) 100%);
+}
+
+.resume-preview-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
     font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: #84a98c;
-    margin-bottom: 30px;
-    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: rgba(11, 17, 32, 0.85);
+    border: 1px solid var(--accent);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity var(--transition), transform var(--transition);
 }
 
-/* Mobile Responsive Design */
-@media (max-width: 968px) {
-    .resume-container {
-        margin-top: 40px;
-        padding: 0 15px;
-    }
-    
-    .resume-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .resume-image {
-        width: 90vw;
-        max-width: 600px;
-    }
+.resume-preview:hover img,
+.resume-preview:focus-visible img {
+    transform: scale(1.02);
+}
+
+.resume-preview:hover .resume-preview-label,
+.resume-preview:focus-visible .resume-preview-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resume-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.resume-actions .btn {
+    flex: 1;
+}
+
+.resume-meta {
+    margin: 16px 0 0;
+    font-size: 0.85rem;
+    color: var(--text-subtle);
 }
 
 @media (max-width: 768px) {
-    .resume-container {
-        margin-top: 30px;
-        padding: 0 10px;
+    .resume-preview {
+        max-height: 420px;
     }
-    
-    .resume-title {
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
-    
-    .resume-image {
-        width: 95vw;
-        max-width: 500px;
-    }
-    
-    .resume-images {
-        gap: 15px;
+
+    /* no hover on touch screens, so always show the hint */
+    .resume-preview-label {
+        opacity: 1;
+        transform: none;
     }
 }
 
 @media (max-width: 480px) {
-    .resume-container {
-        margin-top: 20px;
-        padding: 0 5px;
+    .resume-card {
+        padding: 14px;
     }
-    
-    .resume-title {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
-    }
-    
-    .resume-image {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .resume-images {
-        gap: 12px;
+
+    .resume-actions {
+        flex-direction: column;
     }
 }

@@ -1,170 +1,82 @@
-body {
-    background: linear-gradient(135deg, #232526 0%, #414345 100%);
-    min-height: 100vh;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
-.text {
-    margin-top: 50px;
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 80px;
-}
-.contact-title {
-    text-decoration: underline;
-    text-decoration-color: rgb(67, 196, 225);
-}
-.contact-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 0;
-    width: 100%;
+    gap: 6px;
+    padding: 32px 24px;
+    text-decoration: none;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-.contact-row {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    width: 100%;
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(56, 189, 248, 0.15);
 }
 
-.contact, .contact-g, .contact-l {
-    flex: 1 1 220px;
-    min-width: 220px;
-    max-width: 300px;
-    margin: 0 10px;
-    background: rgba(255,255,255,0.08);
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 10px;
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
-    padding: 32px 20px;
-    color: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: var(--accent);
+    background: var(--accent-soft);
+    transition: background-color var(--transition), color var(--transition);
 }
 
-.contact:hover, .contact-g:hover, .contact-l:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    background: rgba(255,255,255,0.13);
+.contact-card:hover .contact-icon {
+    background: var(--accent);
+    color: var(--bg);
 }
 
-.contact a, .contact-g a, .contact-l a {
-    color: #7fd7ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+.contact-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
 }
 
-.contact a:hover, .contact-g a:hover, .contact-l a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-
-    .contact a:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    background: rgba(255,255,255,0.13);
-}
-.contact a, .contact-g a, .contact-l a {
-    color: #7fd7ff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-.contact a:hover, .contact-g a:hover, .contact-l a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.contact-title {
-    color: #84a98c;
-    text-align: center;
-    font-size: 3.5rem;
+.contact-value {
+    font-size: 1.1rem;
     font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: #84a98c;
-    margin-bottom: 30px;
-    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: var(--text);
+    word-break: break-word;
 }
 
-@media (max-width: 968px) {
-    .contact-row {
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
+@media (max-width: 640px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
-    
-    .contact-div {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        padding: 0 15px;
-    }
-    
-    .contact, .contact-g, .contact-l {
-        max-width: 100%;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .contact-title {
-        font-size: 2.5rem;
-    }
-}
 
-@media (max-width: 768px) {
-    .contact-title {
-        font-size: 2rem;
-        margin-bottom: 20px;
+    .contact-card {
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+        padding: 18px 20px;
+        flex-wrap: wrap;
     }
-    
-    .contact, .contact-g, .contact-l {
-        padding: 24px 15px;
-    }
-    
-    .text {
-        padding-top: 60px;
-    }
-}
 
-@media (max-width: 480px) {
-    .contact-title {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+    .contact-icon {
+        margin-bottom: 0;
+        width: 48px;
+        height: 48px;
     }
-    
-    .contact, .contact-g, .contact-l {
-        padding: 20px 12px;
-    }
-    
-    .contact h2, .contact-g h2, .contact-l h2 {
-        font-size: 1.1rem;
-    }
-    
-    .contact p, .contact-g a, .contact-l a {
-        font-size: 0.9rem;
-    }
-    
-    .contact-div {
-        gap: 15px;
-        padding: 0 10px;
-    }
-    
-    .contact-row {
-        gap: 15px;
+
+    .contact-label {
+        display: none;
     }
 }
