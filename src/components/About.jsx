@@ -1,5 +1,5 @@
 import './About.css';
-import family from '../assets/family.png';
+import family from '../assets/family.jpg';
 
 const QUICK_FACTS = [
     { label: 'School', value: 'West Virginia University' },

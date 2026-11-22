@@ -21,8 +21,6 @@ const PROJECTS = [
         description:
             'StatusHawk is a health-monitoring platform that automatically verifies application uptime across WVU Medicine. A worker service (Execution Plane) performs scheduled HTTP checks against configured endpoints, while the server (Control Plane) parses results, tracks incident state, and serves a Blazor/MudBlazor UI. The system supports application and endpoint management, automated and manual incident tracking, recurring scheduled maintenance, and a live status dashboard drilling from application down to individual check results. Built with .NET, Blazor, MudBlazor, Entity Framework Core, and SQL Server on Azure DevOps.',
         features: [
-            'Full-stack .NET / Blazor platform monitoring live application uptime across a dev department',
-            'Designed around a Control Plane / Execution Plane architecture separating check scheduling from execution',
             'Built a REST API with both CRUD and worker-facing endpoints (PendingChecks, ReportResult)',
             'Implemented two check types: site checks (status-code only) and health-point checks (parses a JSON health body that can report unhealthy dependencies behind a 200)',
             'Auto-creates incidents when an endpoint crosses a failure threshold, and auto-resolves them on recovery',

@@ -10,7 +10,7 @@ function Landing() {
             <div className="landing-text">
                 <p className="landing-eyebrow">Software Developer &amp; IT Technician</p>
                 <h1 className="landing-title">
-                    Welcome to my Portfolio. <span className="accent">Thanks for visiting!</span>
+                    Hi, I’m <span className="accent">Matthew Lindsey</span>
                 </h1>
                 <p className="intro-text">
                     Senior at West Virginia University studying Computer Science with an
