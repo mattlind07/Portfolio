@@ -59,7 +59,7 @@ function ContactForm() {
     }
 
     return (
-        <form className="card contact-form" name="contact" onSubmit={handleSubmit}>
+        <form className="card contact-form" name="contact" onSubmit={handleSubmit} data-reveal>
             <h2>Send me a message</h2>
 
             {/* Honeypot: hidden from people, bots fill it in and get filtered out by Netlify */}
@@ -114,9 +114,11 @@ function Contact() {
                 <ContactForm />
 
                 <div className="contact-list">
-                    {CONTACTS.map(({ label, value, href, Icon, external }) => (
+                    {CONTACTS.map(({ label, value, href, Icon, external }, i) => (
                         <a
                             key={label}
+                            data-reveal
+                            style={{ '--reveal-delay': `${100 + i * 80}ms` }}
                             className="card contact-card"
                             href={href}
                             {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}

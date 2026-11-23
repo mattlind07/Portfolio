@@ -17,7 +17,7 @@ function Resume() {
                 </p>
             </header>
 
-            <div className="card resume-card">
+            <div className="card resume-card" data-reveal>
                 <a
                     className="resume-preview"
                     href={RESUME_URL}

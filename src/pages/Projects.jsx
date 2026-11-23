@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import './Projects.css';
 import { PROJECTS } from '../data/projects';
-import { ArrowUpRightIcon, GitHubIcon, LockIcon } from '../components/Icons';
+import { ArrowRightIcon, ArrowUpRightIcon, GitHubIcon, LockIcon } from '../components/Icons';
 
 function ProjectLink({ link, privateNote }) {
     if (link) {
@@ -34,6 +35,7 @@ function Projects() {
                     <article
                         key={project.slug}
                         id={project.slug}
+                        data-reveal
                         className={`card project-card ${project.layout === 'wide' ? 'project-card--wide' : ''}`}
                     >
                         <header className="project-header">
@@ -65,6 +67,9 @@ function Projects() {
                                 </ul>
 
                                 <div className="project-footer">
+                                    <Link to={`/projects/${project.slug}`} className="btn btn-primary project-link">
+                                        View details <ArrowRightIcon />
+                                    </Link>
                                     <ProjectLink link={project.link} privateNote={project.privateNote} />
                                 </div>
                             </div>

@@ -9,10 +9,40 @@ import ListExpanded from '../assets/ListExpanded.png';
 
 // To add a project, add an object to this list. `link` is optional;
 // use `privateNote` instead when the source can't be shared.
+// `details` powers the project's own page at /projects/<slug>.
 export const PROJECTS = [
     {
         title: 'Status Hawk',
         slug: 'status-hawk',
+        details: {
+            type: 'Internship project · WVU Medicine',
+            role: 'Full-Stack Developer',
+            timeline: 'Jul 2026 – Aug 2026',
+            architecture: {
+                caption: 'Check scheduling (Control Plane) is separated from check execution (Execution Plane).',
+                nodes: [
+                    { title: 'Worker Service', subtitle: 'Execution Plane', points: ['Pulls due checks (PendingChecks)', 'Runs site & health-point HTTP checks', 'Reports results (ReportResult)'] },
+                    { title: 'REST API', subtitle: 'Control Plane', points: ['Parses check results', 'Opens & auto-resolves incidents', 'Honors maintenance windows'] },
+                    { title: 'SQL Server', subtitle: 'Entity Framework Core', points: ['Applications & endpoints', 'Check results & incidents', 'Maintenance schedules'] },
+                    { title: 'Blazor Dashboard', subtitle: 'MudBlazor UI', points: ['Live status tree view', 'Incident & maintenance management', 'Admin vs. read-only roles'] },
+                ],
+            },
+            // { title, body } entries power the "Challenges & what I learned" section
+            challenges: [
+                {
+                    title: 'Parsing inconsistent health-check responses',
+                    body: 'The hardest part was reading the endpoint health checks, because they didn’t share a format: some returned their results as an array, others as a dictionary. Instead of special-casing each endpoint, I built a dynamic parser that adapts to whatever structure an endpoint returns.',
+                },
+                {
+                    title: 'A dashboard that answers questions at a glance',
+                    body: 'I chose which details to surface on the main status view so users get everything they need at a quick glance, without drilling down. The deeper, check-by-check detail is still one click away, but that’s mainly for developers rather than everyday users.',
+                },
+                {
+                    title: 'Building software on a real team',
+                    body: 'This was my first time developing a real project on a real team. I learned how to communicate clearly when I ran into issues, when to ask for help, and how to collaborate closely with my senior developer. That’s experience I’ll keep building on in my next role.',
+                },
+            ],
+        },
         featured: true,
         // short blurb for the home page card
         summary: 'Health-monitoring platform that automates endpoint checks to track application uptime across WVU Medicine.',
@@ -37,6 +67,33 @@ export const PROJECTS = [
     {
         title: 'Iron Kernel',
         slug: 'iron-kernel',
+        details: {
+            type: 'Operating Systems course project · Team',
+            timeline: 'Jan 2026 – May 2026',
+            architecture: {
+                caption: 'How a command typed into the serial shell reaches the kernel.',
+                nodes: [
+                    { title: 'Serial Shell', subtitle: 'COM1 command interface', points: ['Process, date/time & alarm commands', 'Memory inspection', 'Shutdown'] },
+                    { title: 'System Calls', subtitle: 'Interrupt-based', points: ['User programs request kernel services', 'Cooperative context switching'] },
+                    { title: 'Scheduler', subtitle: 'Process management', points: ['Process Control Blocks', 'Ready & blocked queues', 'Priority scheduling'] },
+                    { title: 'Memory Manager', subtitle: 'Custom heap', points: ['Allocate & free blocks', 'Split & merge free memory'] },
+                ],
+            },
+            challenges: [
+                {
+                    title: 'Learning operating systems by building one',
+                    body: 'I had never studied operating systems before this project, so the hardest part was learning how an OS works at the same time we were building one.',
+                },
+                {
+                    title: 'Debugging the CPU scheduler',
+                    body: 'Our toughest bug was in CPU scheduling. I had forgotten to switch the context, so when the scheduler moved to a different process, the previous context was lost and scheduling stopped working correctly. Fixing it meant making sure each process’s context was properly saved and switched.',
+                },
+                {
+                    title: 'Collaborating as a team',
+                    body: 'I learned how to split up work among teammates so everything got done, and how to jump in and help debug when a teammate was stuck.',
+                },
+            ],
+        },
         featured: true,
         // short blurb for the home page card
         summary: 'Multiprogramming OS kernel in C and x86 Assembly with scheduling, system calls, and a custom heap.',
@@ -63,6 +120,32 @@ export const PROJECTS = [
     {
         title: 'Macro Coach',
         slug: 'macro-coach',
+        details: {
+            type: 'Personal project',
+            architecture: {
+                caption: 'The main pieces of the stack.',
+                nodes: [
+                    { title: 'React Frontend', subtitle: 'User interface', points: ['Calorie & macro calculator', 'Weekly weigh-in tracker', 'Progress history'] },
+                    { title: 'Serverless Functions', subtitle: 'Backend', points: ['Server-side logic', 'Requests to AI coaching'] },
+                    { title: 'Supabase', subtitle: 'Postgres database', points: ['User data & weigh-ins', 'Login'] },
+                    { title: 'Google Gemini', subtitle: 'AI coaching', points: ['Coaching features'] },
+                ],
+            },
+            challenges: [
+                {
+                    title: 'Building the adaptive recalibration logic',
+                    body: 'The hardest part was the adaptive recalibration logic: adjusting each user’s calorie and macro targets over time based on the progress they actually log.',
+                },
+                {
+                    title: 'Real weigh-ins over a fixed formula',
+                    body: 'The decision I’m proudest of is recalibrating targets from users’ real weigh-in data instead of relying on a fixed formula, so the targets reflect how each person is actually progressing.',
+                },
+                {
+                    title: 'Integrating AI into an application',
+                    body: 'Macro Coach taught me how to integrate AI into a real application, using Google Gemini to power its coaching features.',
+                },
+            ],
+        },
         featured: true,
         // short blurb for the home page card
         summary: 'Full-stack nutrition app that adapts calorie and macro targets from real weigh-in data.',
@@ -85,6 +168,29 @@ export const PROJECTS = [
     {
         title: 'MIPS Translatron Revamp',
         slug: 'mips-translatron',
+        details: {
+            type: 'Firmware engineering project',
+            timeline: 'Oct 2025 – Nov 2025',
+            architecture: {
+                caption: 'Translation works in both directions between source and machine code.',
+                nodes: [
+                    { title: 'MIPS Assembly', subtitle: 'Source', points: ['e.g. MULT $t1, $t5'] },
+                    { title: 'Assembler', subtitle: 'Assembly → machine code', points: ['Opcode & register encoding', 'New MULT, ORI, SLTI support'] },
+                    { title: 'Machine Code', subtitle: 'Binary & hex', points: ['e.g. 0x012D0018'] },
+                    { title: 'Disassembler', subtitle: 'Machine code → assembly', points: ['Decodes binary or hex input', 'Recovers corrupted encodings'] },
+                ],
+            },
+            challenges: [
+                {
+                    title: 'Fixing bugs in legacy code',
+                    body: 'The hardest part was tracking down and fixing bugs in an existing codebase I hadn’t written, where opcode, register, and control flow logic had all gone wrong.',
+                },
+                {
+                    title: 'Bit manipulation and registers in practice',
+                    body: 'I learned how bit manipulation and registers work in actual code, not just on paper, by encoding and decoding real MIPS instructions bit by bit.',
+                },
+            ],
+        },
         tagline:
             'Demonstrating bidirectional translation of the MULT instruction between Assembly, Binary, and Hex.',
         tags: ['C', 'MIPS Assembly', 'Binary Forensics'],
@@ -108,3 +214,5 @@ export const PROJECTS = [
 ];
 
 export const FEATURED_PROJECTS = PROJECTS.filter((p) => p.featured);
+
+export const getProject = (slug) => PROJECTS.find((p) => p.slug === slug);

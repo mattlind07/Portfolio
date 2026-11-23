@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import useScrollReveal from "../hooks/useScrollReveal";
 import { GitHubIcon, LinkedInIcon, MailIcon } from "../components/Icons";
 import { EMAIL, GITHUB_URL, LINKEDIN_URL } from "../data/links";
 import "./Layout.css";
 
 const Layout = () => {
   const { pathname, hash } = useLocation();
+  useScrollReveal(pathname);
 
   // Links like /projects#status-hawk jump to that section; otherwise
   // start each page at the top instead of keeping the old scroll position.

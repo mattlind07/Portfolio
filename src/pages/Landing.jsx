@@ -49,7 +49,7 @@ function Landing() {
             </section>
 
             {/* Tech strip */}
-            <section className="page home-skills" aria-label="Technologies I work with">
+            <section className="page home-skills" aria-label="Technologies I work with" data-reveal>
                 <p className="home-skills-label">Technologies I work with</p>
                 <ul className="home-skills-list">
                     {HOME_SKILLS.map((skill) => (
@@ -60,7 +60,7 @@ function Landing() {
 
             {/* Featured projects */}
             <section className="page home-featured" aria-labelledby="featured-heading">
-                <div className="home-section-head">
+                <div className="home-section-head" data-reveal>
                     <h2 id="featured-heading" className="home-section-title">Featured Projects</h2>
                     <Link to="/projects" className="text-link home-see-all">
                         See all projects <ArrowRightIcon />
@@ -68,10 +68,12 @@ function Landing() {
                 </div>
 
                 <div className="featured-grid">
-                    {FEATURED_PROJECTS.map((project) => (
+                    {FEATURED_PROJECTS.map((project, i) => (
                         <Link
                             key={project.slug}
-                            to={`/projects#${project.slug}`}
+                            data-reveal
+                            style={{ '--reveal-delay': `${i * 110}ms` }}
+                            to={`/projects/${project.slug}`}
                             className="card featured-card"
                         >
                             <div className="featured-thumb">

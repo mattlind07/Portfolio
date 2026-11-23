@@ -63,10 +63,10 @@ function About() {
 
             {/* Experience timeline */}
             <section className="about-section" aria-labelledby="experience-heading">
-                <h2 id="experience-heading" className="about-section-title">Experience</h2>
+                <h2 id="experience-heading" className="about-section-title" data-reveal>Experience</h2>
                 <ol className="timeline">
                     {EXPERIENCE.map((job) => (
-                        <li key={`${job.role}-${job.company}`} className="timeline-item">
+                        <li key={`${job.role}-${job.company}`} className="timeline-item" data-reveal>
                             <span className={`timeline-dot ${job.current ? 'is-current' : ''}`} aria-hidden="true" />
                             <article className="card timeline-card">
                                 <header className="timeline-header">
@@ -96,10 +96,10 @@ function About() {
 
             {/* Skills */}
             <section className="about-section" aria-labelledby="skills-heading">
-                <h2 id="skills-heading" className="about-section-title">Skills</h2>
+                <h2 id="skills-heading" className="about-section-title" data-reveal>Skills</h2>
                 <div className="skills-grid">
-                    {SKILL_GROUPS.map((group) => (
-                        <div key={group.title} className="card skill-group">
+                    {SKILL_GROUPS.map((group, i) => (
+                        <div key={group.title} className="card skill-group" data-reveal style={{ '--reveal-delay': `${(i % 2) * 100}ms` }}>
                             <h3>{group.title}</h3>
                             <ul>
                                 {group.skills.map((skill) => (

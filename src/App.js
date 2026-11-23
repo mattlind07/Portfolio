@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import About from './components/About.jsx';
 import Projects from './pages/Projects.jsx';
+import ProjectDetail from './pages/ProjectDetail.jsx';
 import Resume from './components/Resume.jsx';
 import Contact from './pages/Contact.jsx';
 import Landing from './pages/Landing.jsx';
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Landing />} />
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="projects/:slug" element={<ProjectDetail />} />
           <Route path="resume" element={<Resume />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
