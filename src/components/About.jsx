@@ -1,11 +1,13 @@
 import './About.css';
 import family from '../assets/family.jpg';
+import { EXPERIENCE } from '../data/experience';
+import { SKILL_GROUPS } from '../data/skills';
 
 const QUICK_FACTS = [
     { label: 'School', value: 'West Virginia University' },
     { label: 'Major', value: 'Computer Science, Cybersecurity' },
     { label: 'Graduating', value: 'Spring 2027' },
-    { label: 'Experience', value: 'Software Engineer Intern, WVU Medicine' },
+    { label: 'Currently', value: 'IT Technician, WVU Medicine' },
 ];
 
 function About() {
@@ -58,6 +60,56 @@ function About() {
                     </p>
                 </div>
             </div>
+
+            {/* Experience timeline */}
+            <section className="about-section" aria-labelledby="experience-heading">
+                <h2 id="experience-heading" className="about-section-title">Experience</h2>
+                <ol className="timeline">
+                    {EXPERIENCE.map((job) => (
+                        <li key={`${job.role}-${job.company}`} className="timeline-item">
+                            <span className={`timeline-dot ${job.current ? 'is-current' : ''}`} aria-hidden="true" />
+                            <article className="card timeline-card">
+                                <header className="timeline-header">
+                                    <div>
+                                        <h3 className="timeline-role">{job.role}</h3>
+                                        <p className="timeline-company">
+                                            {job.company} · {job.location}
+                                        </p>
+                                    </div>
+                                    <span className={`timeline-dates ${job.current ? 'is-current' : ''}`}>{job.dates}</span>
+                                </header>
+                                <ul className="timeline-highlights">
+                                    {job.highlights.map((item) => (
+                                        <li key={item}>{item}</li>
+                                    ))}
+                                </ul>
+                                <ul className="timeline-tags" aria-label="Tools used">
+                                    {job.tags.map((tag) => (
+                                        <li key={tag} className="tag">{tag}</li>
+                                    ))}
+                                </ul>
+                            </article>
+                        </li>
+                    ))}
+                </ol>
+            </section>
+
+            {/* Skills */}
+            <section className="about-section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading" className="about-section-title">Skills</h2>
+                <div className="skills-grid">
+                    {SKILL_GROUPS.map((group) => (
+                        <div key={group.title} className="card skill-group">
+                            <h3>{group.title}</h3>
+                            <ul>
+                                {group.skills.map((skill) => (
+                                    <li key={skill} className="skill-chip">{skill}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </section>
     );
 }

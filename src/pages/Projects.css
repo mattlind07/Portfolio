@@ -7,6 +7,8 @@
 .project-card {
     padding: 40px;
     transition: border-color var(--transition);
+    /* when jumping here from a home page link, don't hide under the navbar */
+    scroll-margin-top: calc(var(--nav-height) + 24px);
 }
 
 .project-card:hover {

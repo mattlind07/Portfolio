@@ -99,3 +99,239 @@
         font-size: 1.1rem;
     }
 }
+
+/* ==========================================================================
+   Sections below the bio (Experience, Skills)
+   ========================================================================== */
+.about-section {
+    margin-top: 72px;
+}
+
+.about-section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+/* thin line that runs from the heading to the edge */
+.about-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 36px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* vertical line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(to bottom, var(--accent), rgba(56, 189, 248, 0.1));
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -36px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--accent);
+}
+
+.timeline-dot.is-current {
+    background: var(--accent);
+    box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+.timeline-card {
+    padding: 26px 30px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.timeline-role {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.timeline-company {
+    margin: 2px 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.timeline-dates {
+    flex-shrink: 0;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: rgba(148, 163, 184, 0.1);
+    white-space: nowrap;
+}
+
+.timeline-dates.is-current {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.timeline-highlights {
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.timeline-highlights li {
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.timeline-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--accent);
+    transform: rotate(45deg);
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-group {
+    padding: 24px 26px;
+}
+
+.skill-group h3 {
+    margin: 0 0 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.skill-group ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-chip {
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.skill-chip:hover {
+    border-color: rgba(56, 189, 248, 0.45);
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: 56px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-section-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 28px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-dot {
+        left: -28px;
+        top: 26px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .timeline-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skill-group {
+        padding: 20px;
+    }
+}
